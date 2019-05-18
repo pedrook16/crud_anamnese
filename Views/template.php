@@ -8,10 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=PT+Serif&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/css/style.css">
   </head>
-  <body class="container">
-    <div class="container">
-      <h1>Listagem de Anamneses</h1>
-    </div>
+  <body class="container">    
 
     <?php $this->loadViewInTemplate($viewName, $viewData); ?>
   </body>
