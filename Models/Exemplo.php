@@ -36,14 +36,14 @@ class Exemplo extends Model {
 
 	}
 
-	public function update($anamnese, $response, $id) {
+	public function edit($anamnese, $response, $id) {
 		$sql = "UPDATE diagnostic SET anamnese = :anamnese,
 		response = :response  WHERE id = :id";
 		$sql = $this->db->prepare($sql);
-		$sql->bindValue(':anamnese', $anamnese);
-		$sql->bindValue(':response', $response);
-		$sql->bindValue(':id', $id);
-		$sql->execute();
+		$sql->bindValue(":anamnese", $anamnese);
+		$sql->bindValue(":response", $response);
+		$sql->bindValue(":id", $id);
+		$sql->execute();		
 	}
 
 	public function del($id) {

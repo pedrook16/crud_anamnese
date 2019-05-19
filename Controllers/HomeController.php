@@ -35,11 +35,11 @@ class HomeController extends Controller {
 			
 			if(!empty($_POST['anamnese'])) {
 				$anamnese = $_POST['anamnese'];
-				$response = $_POST['response'] == 'true' ? true : false ;
+				$response = $_POST['response'] == 'true' ? true : false;
 				
-				$exemplo->update($id, $anamnese, $response);								
+				$exemplo->edit($anamnese, $response, $id);												
 			}else{	
-				$this->arrayInfo['info'] = $exemplo->get($id);
+				$this->arrayInfo['info'] = $exemplo->get($id);			
 				$this->loadTemplate('edit', $this->arrayInfo);
 				exit;
 			}			
