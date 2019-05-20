@@ -11,9 +11,9 @@
                 </div>
 				<div class="box-body">
 					<label for="yes">Sim</label>
-					<input type="radio" name="response" <? if($info['response'] == '1') echo "checked"; ?> value="true" id="yes">
+					<input type="radio" name="response" <?php echo $info['response'] == '1' ? 'checked' : ''; ?> value="true" id="yes">
 					<label for="no">Não</label>
-					<input type="radio" name="response" <? if($info['response'] == '0') echo "checked"; ?> value="false" id="no" >  
+					<input type="radio" name="response" <?php echo $info['response'] == '0' ? 'checked' : ''; ?> value="false" id="no" >  
 				<div class="box-tools">
 					<button class="btn btn-success">Salvar</button>
 				</div>
